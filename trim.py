@@ -53,9 +53,5 @@ ret, frame = cap.read()
 
 for i in range(0,count,THINNING_RATE):
     save_frame(cap, i//THINNING_RATE, "%d.jpg"%(i//THINNING_RATE))
-
-# for i in range(0,count,THINNING_RATE):
     cut("%d.jpg"%(i//THINNING_RATE), "%d_t.jpg"%(i//THINNING_RATE), 245, 500, width=120, height=148)
-
-# for i in range(0,count,THINNING_RATE):
     os.remove("%d.jpg"%(i//THINNING_RATE))
